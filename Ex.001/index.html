@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,24 +9,63 @@
         body {
             background-color: rgb(11, 37, 37);
         }
-        h1{
+
+        h1 {
             color: rgb(255, 213, 0);
         }
+
         p {
             color: white
         }
     </style>
 </head>
+
 <body>
     <h1>Olá, mundo!</h1>
     <p> Já me livrei </p>
     <p>Estou testando para ser um bom <strong>programador</strong></p>
+    <h1>Cadastro</h1>
+
+    <form>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome">
+
+        <br><br>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email">
+
+        <br><br>
+
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha">
+
+        <br><br>
+
+        <button type="submit">Enviar</button>
+    </form>
     <script>
         window.alert('Minha primeira mensagem!');
         window.confirm('Está gostando de JS?');
         window.prompt('qual o seu nome?')
+
+
+        const formulario = document.getElementById("meuFormulario");
+
+        formulario.addEventListener("submit", function (event) {
+            event.preventDefault(); // impede o envio
+
+            const nome = document.getElementById("nome").value;
+
+            if (nome === "") {
+                alert("Digite seu nome!");
+            } else {
+                alert("Formulário enviado!");
+            }
+        });
     </script> // Assim para fazer comentarios em JS
-    
+
     /*Tem essa outra foma tbm de fazer comentário*/
 </body>
+
 </html>
