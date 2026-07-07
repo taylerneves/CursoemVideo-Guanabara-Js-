@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplos DOM</title>
+</head>
+<body>
+
+    <!-- ID -->
+    <h1 id="titulo">Título da Página</h1>
+
+    <!-- Tag (Marca) -->
+    <p>Primeiro parágrafo</p>
+    <p>Segundo parágrafo</p>
+
+    <!-- Name -->
+    <input type="text" name="nome" placeholder="Digite seu nome">
+
+    <!-- Classe -->
+    <div class="caixa">Primeira caixa</div>
+    <div class="caixa">Segunda caixa</div>
+
+    <!-- Seletor CSS -->
+    <button id="botao">Clique aqui</button>
+
+    <script>
+
+        // ==========================
+        // 1. getElementById()
+        // ==========================
+        let titulo = document.getElementById("titulo");
+        titulo.innerHTML = "Título alterado pelo ID";
+
+
+        // ==========================
+        // 2. getElementsByTagName()
+        // ==========================
+        let paragrafos = document.getElementsByTagName("p");
+
+        paragrafos[0].style.color = "blue";
+        paragrafos[1].style.color = "red";
+
+
+        // ==========================
+        // 3. getElementsByName()
+        // ==========================
+        let campoNome = document.getElementsByName("nome");
+
+        campoNome[0].value = "João";
+
+
+        // ==========================
+        // 4. getElementsByClassName()
+        // ==========================
+        let caixas = document.getElementsByClassName("caixa");
+
+        caixas[0].style.background = "yellow";
+        caixas[1].style.background = "lightgreen";
+
+
+        // ==========================
+        // 5. querySelector()
+        // ==========================
+        let botao = document.querySelector("#botao");
+
+        botao.innerHTML = "Novo Texto";
+
+    </script>
+
+</body>
+</html>
