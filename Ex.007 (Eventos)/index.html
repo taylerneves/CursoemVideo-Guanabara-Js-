@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos JavaScript</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        #caixa {
+            width: 250px;
+            height: 120px;
+            background-color: lightblue;
+            margin: 20px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            transition: .3s;
+            cursor: pointer;
+        }
+
+        input {
+            padding: 10px;
+            width: 250px;
+        }
+
+        #mensagem {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Testando Eventos JavaScript</h1>
+
+    <button id="botao">Clique em mim</button>
+
+    <div id="caixa">
+        Passe o mouse aqui
+    </div>
+
+    <input type="text" id="nome" placeholder="Digite seu nome">
+
+    <p id="mensagem"></p>
+
+    <script>
+
+        let botao = document.getElementById("botao");
+        let caixa = document.getElementById("caixa");
+        let nome = document.getElementById("nome");
+        let mensagem = document.getElementById("mensagem");
+
+        // Evento CLICK
+        botao.addEventListener("click", function () {
+            alert("Você clicou no botão!");
+        });
+
+        // Evento MOUSEOVER
+        caixa.addEventListener("mouseover", function () {
+            caixa.style.backgroundColor = "lightgreen";
+            caixa.innerHTML = "Mouse em cima!";
+        });
+
+        // Evento MOUSEOUT
+        caixa.addEventListener("mouseout", function () {
+            caixa.style.backgroundColor = "lightblue";
+            caixa.innerHTML = "Passe o mouse aqui";
+        });
+
+        // Evento INPUT
+        nome.addEventListener("input", function () {
+            mensagem.innerHTML = "Olá, " + nome.value + "!";
+        });
+
+    </script>
+
+</body>
+</html>
