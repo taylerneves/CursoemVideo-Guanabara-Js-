@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background: rgb(233, 205, 143);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header{
+    margin: 30px 0;
+}
+
+header h1{
+    color: white;
+    font-size: 2.5rem;
+}
+p#mensagem {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.card{
+    width: 500px;
+    background: white;
+    border-radius: 10px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,.2);
+}
+
+#msg{
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.imagem{
+    display: flex;
+    justify-content: center;
+}
+
+.imagem img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+footer{
+    margin-top: 20px;
+    color: white;
+    font-style: italic;
+    font-size: 1rem;
+}
